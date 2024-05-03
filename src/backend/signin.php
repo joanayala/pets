@@ -20,7 +20,7 @@
     $total = pg_num_rows($result);
 
     if ($total > 0){
-        echo "Login OK";
+        header("refresh:0;url=../home.php");
     }else{
         echo "Credenciales incorrectas";
     }
