@@ -1,3 +1,12 @@
+<?php
+    session_start();
+    if(!isset($_SESSION["id_user"])){
+        //header("Location:home.php");
+        header("refresh:0;url=signin.php");
+        exit;
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +15,6 @@
     <title>Pets | Home</title>
 </head>
 <body>
-    <a href = "#">Sign out</a>
+    <a href = "backend/logout.php">Sign out</a>
 </body>
 </html>
